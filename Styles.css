@@ -4,7 +4,6 @@
    ================================================================ */
 
 /* ── 1. CSS CUSTOM PROPERTIES ──────────────────────────────────── */
-/* EDIT: Adjust color scheme here to rebrand the whole site      */
 :root {
   /* Core palette */
   --bg:          #0a0a0b;           /* Primary background */
