@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ============================================================
+       TITLE & META
+       ============================================================ -->
+    <title>Diego Torres - Computer Science and Data Science</title>
+    <meta
+      name="description"
+      content="Diego Torres is a Computer Science and Data Science graduate from CSUSM. Passionate about building innovative solutions at the intersection of technology and data."
+    />
+
+    <!-- Google Fonts: DM Serif Display + JetBrains Mono + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Devicons CDN for tech stack icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <!-- -: Change to your name/handle -->
+        <a href="#home" class="nav-logo" aria-label="Home">
+          <span class="logo-bracket">[</span>DT<span class="logo-bracket"
+            >]</span
+          >
+        </a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="https://github.com/DiegoTorresAlmazan"
+              class="nav-cta"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+      <section class="hero" id="home" aria-label="Introduction">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="hero-greeting reveal-up" aria-hidden="true">
+            <span class="mono">// hello, I'm</span>
+          </p>
+
+    
+          <h1 class="hero-name reveal-up delay-1">
+            Diego<br /><em>Torres</em>
+          </h1>
+
+        
+          <p class="hero-tagline reveal-up delay-2">
+            Computer Science & Data Science.<br />
+            CS graduate from <em> CSUSM </em> looking to build
+            <em>meaningful solutions.</em>
+          </p>
+
+          <div class="hero-status reveal-up delay-3">
+            <span class="status-dot" aria-hidden="true"></span>
+            
+            <span class="mono">Looking for new opportunities</span>
+          </div>
+
+          <div class="hero-actions reveal-up delay-4">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+           
+            <a
+              href="https://github.com/DiegoTorresAlmazan"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint reveal-up delay-4" aria-hidden="true">
+          <span class="mono">scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         ABOUT SECTION
+         ============================================================ -->
+      <section class="about section" id="about" aria-label="About me">
+        <div class="container">
+          <div class="section-label reveal-left">
+            <span class="mono label-num">01.</span>
+            <span>About</span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text reveal-left delay-1">
+              <h2 class="section-title">
+                Crafting software<br /><em>worth using</em>
+              </h2>
+           
+              <p>
+                I’m Diego Torres-Almazan, Computer Science alum from California
+                State University, San Marcos with experience in software
+                development, VR applications, and robotics. I have hands-on
+                experience with Java, C++, C#, Python, SQL, and tools like
+                Unity, OculusSDK, XR Interaction Toolkit, Git/GitHub, pandas,
+                and NumPy.
+              </p>
+              <p>
+                I’m passionate about developing interactive, data-driven
+                applications that connect technology with real-world impact and
+                enjoy exploring new technologies, VR/AR development, and
+                robotics while sharing my work with the community.
+              </p>
+
+             
+              <div class="about-meta mono">
+                <span>📍 San Diego, CA</span>
+              </div>
+            </div>
+
+            <div class="about-stack reveal-right delay-2">
+              <h3 class="stack-title mono">// tech I work with</h3>
+              <div class="stack-grid">
+               
+                <div class="stack-item" data-tooltip="JavaScript">
+                  <i
+                    class="devicon-javascript-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="stack-item" data-tooltip="TypeScript">
+                  <i
+                    class="devicon-typescript-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>TypeScript</span>
+                </div>
+                <div class="stack-item" data-tooltip="React">
+                  <i
+                    class="devicon-react-original colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>React</span>
+                </div>
+                <div class="stack-item" data-tooltip="Node.js">
+                  <i
+                    class="devicon-nodejs-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>Node.js</span>
+                </div>
+                <div class="stack-item" data-tooltip="Python">
+                  <i
+                    class="devicon-python-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>Python</span>
+                </div>
+                <div class="stack-item" data-tooltip="PostgreSQL">
+                  <i
+                    class="devicon-postgresql-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="stack-item" data-tooltip="Docker">
+                  <i
+                    class="devicon-docker-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>Docker</span>
+                </div>
+                <div class="stack-item" data-tooltip="AWS">
+                  <i
+                    class="devicon-amazonwebservices-plain-wordmark colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>AWS</span>
+                </div>
+                <div class="stack-item" data-tooltip="Git">
+                  <i class="devicon-git-plain colored" aria-hidden="true"></i>
+                  <span>Git</span>
+                </div>
+                <div class="stack-item" data-tooltip="Linux">
+                  <i class="devicon-linux-plain" aria-hidden="true"></i>
+                  <span>Linux</span>
+                </div>
+                <div class="stack-item" data-tooltip="GraphQL">
+                  <i
+                    class="devicon-graphql-plain colored"
+                    aria-hidden="true"
+                  ></i>
+                  <span>GraphQL</span>
+                </div>
+                <div class="stack-item" data-tooltip="Redis">
+                  <i class="devicon-redis-plain colored" aria-hidden="true"></i>
+                  <span>Redis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         PROJECTS SECTION
+         ============================================================ -->
+      <section class="projects section" id="projects" aria-label="Projects">
+        <div class="container">
+          <div class="section-label reveal-left">
+            <span class="mono label-num">02.</span>
+            <span>Projects</span>
+          </div>
+
+          <h2 class="section-title reveal-left delay-1">
+            Things I've<br /><em>built</em>
+          </h2>
+
+          <div class="projects-grid">
+            <!-- ── PROJECT CARD 1 ──────────────────────────────── -->
+            <article class="project-card reveal-up delay-1" data-live="true">
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="project-num mono">01</span>
+                  <div class="card-links">
+                    
+                    <a
+                      href="https://github.com/DiegoTorresAlmazan/SuperMarket-VR-Rehab"
+                      class="icon-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub repository"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                        />
+                      </svg>
+                    </a>
+                   
+                    <a
+                      href="https://drive.google.com/file/d/1s46RmFmz-a0nthNfFIBg0KPuvtg1c0fL/view?usp=sharing"
+                      class="icon-link live-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Live demo"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                
+                <h3 class="project-title">VR Rehabilitation App</h3>
+                
+                <p class="project-desc">
+                  A virtual reality application designed for physical therapy
+                  rehabilitation. Built with Unity and Oculus SDK, it provides
+                  immersive exercises and real-time feedback to enhance patient
+                  engagement and recovery outcomes.
+                </p>
+                <div class="project-footer">
+                  <!-- -: Technologies used -->
+                  <div class="tag-list" aria-label="Technologies used">
+                    <span class="tag">Unity</span>
+                    <span class="tag">Oculus SDK</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">VR Development</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── PROJECT CARD 2 ──────────────────────────────── -->
+            <article class="project-card reveal-up delay-2" data-live="true">
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="project-num mono">02</span>
+                  <div class="card-links">
+                    <a
+                      href="https://github.com/yourusername/project-two"
+                      class="icon-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub repository"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://csusm-my.sharepoint.com/:v:/r/personal/medin237_csusm_edu/Documents/20251001_194931000_iOS.MOV?csf=1&web=1&e=41WHgh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+                      class="icon-link live-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Live demo"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Sway App</h3>
+                <p class="project-desc">
+                  App that helps with balance detection and fall prevention for
+                  elderly users. It uses device sensors from Bertec to monitor
+                  movement patterns and provides real-time feedback and alerts
+                  to caregivers. Built with Oculus SDK, Unity, and C#.
+                </p>
+                <div class="project-footer">
+                  <div class="tag-list">
+                    <span class="tag">Bertec SDK</span>
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Oculus SDK</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── PROJECT CARD 3 ──────────────────────────────── -->
+            <article class="project-card reveal-up delay-3" data-live="false">
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="project-num mono">03</span>
+                  <div class="card-links">
+                    <a
+                      href="https://github.com/DiegoTorresAlmazan/Football-Player-Market-Predictor"
+                      class="icon-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub repository"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Football Market Value Predictor</h3>
+                <p class="project-desc">
+                  A machine learning model that predicts the market value of
+                  football players based on their performance stats, age, and
+                  other factors. Built with Python, scikit-learn, and pandas.
+                </p>
+                <div class="project-footer">
+                  <div class="tag-list">
+                    <span class="tag">Python</span>
+                    <span class="tag">scikit-learn</span>
+                    <span class="tag">Cloud Deployment</span>
+                    <span class="tag">pandas</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── PROJECT CARD 4 ──────────────────────────────── -->
+            <article class="project-card reveal-up delay-1" data-live="true">
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="project-num mono">04</span>
+                  <div class="card-links">
+                    <a
+                      href="https://github.com/KellyLFrear/Willowbrook-Ranch"
+                      class="icon-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub repository"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://your-project-demo.com"
+                      class="icon-link live-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Live demo"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Willowbrook Ranch</h3>
+                <p class="project-desc">
+                  ACreated a farming game with a team of 5 people using Unity
+                  and C#. Implemented features like crop planting, harvesting,
+                  and a day-night cycle. The game is designed to be relaxing and
+                  enjoyable, with pixel art graphics and a soothing soundtrack.
+                </p>
+                <div class="project-footer">
+                  <div class="tag-list">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Game Development</span>
+                    <span class="tag">Pixel Art</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+           
+        </div>
+      </section> 
+
+      <!-- ============================================================
+         SKILLS SECTION
+         ============================================================ -->
+      <section class="skills section" id="skills" aria-label="Skills">
+        <div class="container">
+          <div class="section-label reveal-left">
+            <span class="mono label-num">03.</span>
+            <span>Skills</span>
+          </div>
+
+          <h2 class="section-title reveal-left delay-1">
+            Tools of the<br /><em>trade</em>
+          </h2>
+
+          <div class="skills-grid">
+            <!-- SKILL CATEGORY: Languages -->
+            
+            <div class="skill-group reveal-up delay-1">
+              <h3 class="skill-group-title mono">// languages</h3>
+              <div class="skill-bars">
+                <div class="skill-bar-item">
+                  <div class="skill-bar-label">
+                    <span>Python</span>
+                    <span class="mono skill-pct">95%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="95"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-label">
+                    <span>Java</span>
+                    <span class="mono skill-pct">85%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="85"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-label">
+                    <span>SQL</span>
+                    <span class="mono skill-pct">80%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="80"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-label">
+                    <span>C#</span>
+                    <span class="mono skill-pct">60%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="60"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-label">
+                    <span>C++</span>
+                    <span class="mono skill-pct">40%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="40"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+ <!-- SKILL CATEGORY: Data Science -->
+          
+          <div class="skill-group reveal-up delay-2">
+            <h3 class="skill-group-title mono">// data science &amp; ml</h3>
+            <div class="tag-cloud">
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Keras</span>
+              <span class="skill-tag">XGBoost</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Jupyter</span>
+              <span class="skill-tag">Spark</span>
+              <span class="skill-tag">dbt</span>
+              <span class="skill-tag">Airflow</span>
+            </div>
+          </div>
+ 
+          <!-- SKILL CATEGORY: Infrastructure -->
+          <div class="skill-group reveal-up delay-3">
+            <h3 class="skill-group-title mono">// infrastructure &amp; tools</h3>
+            <div class="tag-cloud">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">GCP</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Nginx</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Vercel</span>
+            </div>
+          </div>
+ 
+        </div><!-- /.skills-grid -->
+      </div>
+    </section>
+
+      <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+      <section class="contact section" id="contact" aria-label="Contact">
+        <div class="container">
+          <div class="section-label reveal-left">
+            <span class="mono label-num">04.</span>
+            <span>Contact</span>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-text reveal-left delay-1">
+              <h2 class="section-title">Let's build<br /><em>something</em></h2>
+            
+              <p>
+                I'm currently open to freelance projects, full-time roles, and
+                interesting collaborations. Whether you have a clear idea or
+                just an exciting problem — I'd love to hear from you.
+              </p>
+
+              <div class="contact-links">
+                
+                <a
+                  href="mailto:dtorres.almazan@gmail.com"
+                  class="contact-link"
+                  aria-label="Email"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>dtorres.almazan@gmail.com</span>
+                </a>
+                <a
+                  href="https://github.com/DiegoTorresAlmazan"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                  <span>github.com/DiegoTorresAlmazan</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/diego-torres-al/"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                    />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  <span>linkedin.com/in/diego-torres-al/</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrap reveal-right delay-2">
+              <form
+                class="contact-form"
+                id="contact-form"
+                novalidate
+                aria-label="Contact form"
+              >
+                <div class="form-group">
+                  <label for="name" class="form-label mono">// name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your Name"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label mono">// email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label mono"
+                    >// message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    placeholder="Tell me about your project..."
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading" aria-hidden="true">Sending...</span>
+                </button>
+                <p
+                  class="form-success"
+                  id="form-success"
+                  role="status"
+                  aria-live="polite"
+                >
+                  ✓ Message received — I'll be in touch soon!
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <!-- -: Your name -->
+        <span class="mono footer-copy">
+          &copy; <span id="footer-year"></span> Diego Torres Almazan. Built with HTML,
+          CSS &amp; JS.
+        </span>
+        <span class="mono footer-sig">Designed &amp; developed with ♥</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
