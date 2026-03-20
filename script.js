@@ -284,19 +284,23 @@ function debounce(fn, wait = 150) {
     submitBtn.disabled = true;
 
     try {
-      
-          const response = await fetch('https://formspree.io/f/mzdjjqob', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({
-              name: nameInput.value,
-            email: emailInput.value,
-             message: messageInput.value
-           })
-          });
-          if (!response.ok) throw new Error('Submission failed');
-       
-        
+      /*
+       * === REPLACE THIS BLOCK WITH YOUR FORM SUBMISSION LOGIC ===
+       *
+       * Example with Formspree:
+       *   const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+       *     method: 'POST',
+       *     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+       *     body: JSON.stringify({
+       *       name: nameInput.value,
+       *       email: emailInput.value,
+       *       message: messageInput.value
+       *     })
+       *   });
+       *   if (!response.ok) throw new Error('Submission failed');
+       *
+       * ============================================================
+       */
       await new Promise(resolve => setTimeout(resolve, 1200)); // simulated delay
 
       // — Success state —

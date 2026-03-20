@@ -27,6 +27,131 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* ── RESUME BUTTON ─────────────────────────────────────── */
+      .btn-accent {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-family: var(--font-mono, 'JetBrains Mono', monospace);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        background: transparent;
+        color: #00d4ff;
+        border: 1px solid #00d4ff;
+        transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .btn-accent:hover {
+        background: rgba(0, 212, 255, 0.12);
+        box-shadow: 0 0 22px rgba(0, 212, 255, 0.3);
+        transform: translateY(-2px);
+      }
+      .btn-accent svg { flex-shrink: 0; }
+
+      /* ── GITHUB STATS SECTION ──────────────────────────────── */
+      .github-stats { padding-block: clamp(60px, 10vw, 120px); }
+
+      .gh-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
+
+      .gh-card-img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid #1e2a36;
+        background: #0e1318;
+        display: block;
+        transition: border-color 0.28s, transform 0.28s;
+      }
+
+      .gh-card-img:hover {
+        border-color: #00d4ff;
+        transform: translateY(-4px);
+      }
+
+      /* Streak card spans full width */
+      .gh-card-full {
+        grid-column: 1 / -1;
+      }
+
+      /* ── PROJECT SCREENSHOT ────────────────────────────────── */
+      .project-screenshot {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #1e2a36;
+        background: #0e1318;
+        margin-block: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      .screenshot-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .project-card:hover .screenshot-img {
+        transform: scale(1.04);
+      }
+
+      /* Overlay label on bottom of screenshot */
+      .screenshot-overlay {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 0.5rem 0.75rem;
+        background: linear-gradient(to top, rgba(8,12,16,0.9), transparent);
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        color: #00d4ff;
+        opacity: 0;
+        transition: opacity 0.28s;
+      }
+
+      .project-card:hover .screenshot-overlay { opacity: 1; }
+
+      /* Fallback when image is missing — shows a styled placeholder */
+      .project-screenshot.screenshot-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: dashed;
+      }
+
+      .project-screenshot.screenshot-placeholder::after {
+        content: '📸 Add screenshot';
+        font-family: var(--font-mono, monospace);
+        font-size: 0.72rem;
+        color: #4a5e72;
+        letter-spacing: 0.08em;
+      }
+
+      .project-screenshot.screenshot-placeholder .screenshot-img,
+      .project-screenshot.screenshot-placeholder .screenshot-overlay {
+        display: none;
+      }
+
+      /* ── RESPONSIVE ────────────────────────────────────────── */
+      @media (max-width: 680px) {
+        .gh-cards { grid-template-columns: 1fr; }
+        .gh-card-full { grid-column: 1; }
+        .project-screenshot { height: 150px; }
+      }
+    </style>
   </head>
   <body>
     <!-- ============================================================
@@ -78,7 +203,7 @@
 
         <div class="hero-content">
           <p class="hero-greeting reveal-up" aria-hidden="true">
-            <span class="mono">// hello, I'm</span>
+            <span class="mono">// hello, i'm</span>
           </p>
 
     
@@ -101,6 +226,21 @@
 
           <div class="hero-actions reveal-up delay-4">
             <a href="#projects" class="btn btn-primary">View Projects</a>
+
+            <!-- resume section -->
+            <a
+              href="screenshots and files/DIEGO TORRES UPDATED 2026.pdf"
+              class="btn btn-accent"
+              download
+              aria-label="Download resume PDF"
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Resume
+            </a>
            
             <a
               href="https://github.com/DiegoTorresAlmazan"
@@ -253,6 +393,44 @@
       </section>
 
       <!-- ============================================================
+         GITHUB STATS SECTION
+         ============================================================ -->
+      <section class="github-stats section" id="github-stats" aria-label="GitHub activity">
+        <div class="container">
+          <div class="section-label reveal-left">
+            <span class="mono label-num">01.5</span>
+            <span>GitHub Activity</span>
+          </div>
+          <h2 class="section-title reveal-left delay-1">
+            Code<br /><em>overlook</em>
+          </h2>
+          <div class="gh-cards reveal-up delay-2">
+            <!-- GitHub Stats Card -->
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=DiegoTorresAlmazan&show_icons=true&theme=transparent&hide_border=true&title_color=00d4ff&icon_color=00d4ff&text_color=8a9bb0&bg_color=0e1318"
+              alt="Diego's GitHub stats"
+              class="gh-card-img"
+              loading="lazy"
+            />
+            <!-- Top Languages Card -->
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=DiegoTorresAlmazan&layout=compact&theme=transparent&hide_border=true&title_color=00d4ff&text_color=8a9bb0&bg_color=0e1318"
+              alt="Diego's most used languages"
+              class="gh-card-img"
+              loading="lazy"
+            />
+            <!-- Contribution Streak -->
+            <img
+              src="https://streak-stats.demolab.com?user=DiegoTorresAlmazan&theme=transparent&hide_border=true&ring=00d4ff&fire=00ffb3&currStreakLabel=00d4ff&sideLabels=8a9bb0&dates=8a9bb0&stroke=1e2a36"
+              alt="Diego's GitHub contribution streak"
+              class="gh-card-img gh-card-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
          PROJECTS SECTION
          ============================================================ -->
       <section class="projects section" id="projects" aria-label="Projects">
@@ -319,6 +497,20 @@
                 </div>
                 
                 <h3 class="project-title">VR Rehabilitation App</h3>
+
+                <!-- Replace vr-rehab-screenshot.png with your actual screenshot filename -->
+                <div class="project-screenshot">
+                  <img
+                    src="screenshots and files/vr-rehab-screenshot.png"
+                    alt="VR Rehabilitation App screenshot"
+                    class="screenshot-img"
+                    loading="lazy"
+                    onerror="this.parentElement.classList.add('screenshot-placeholder')"
+                  />
+                  <div class="screenshot-overlay">
+                    <span class="mono">VR Rehab System</span>
+                  </div>
+                </div>
                 
                 <p class="project-desc">
                   A virtual reality application designed for physical therapy
@@ -431,6 +623,21 @@
                   </div>
                 </div>
                 <h3 class="project-title">Football Market Value Predictor</h3>
+
+                <!-- Replace football-predictor-screenshot.png with your actual screenshot -->
+                <div class="project-screenshot">
+                  <img
+                    src="screenshots and files/football-predictor-screenshot.png"
+                    alt="Football Market Value Predictor screenshot"
+                    class="screenshot-img"
+                    loading="lazy"
+                    onerror="this.parentElement.classList.add('screenshot-placeholder')"
+                  />
+                  <div class="screenshot-overlay">
+                    <span class="mono">Football p-value Predictor</span>
+                  </div>
+                </div>
+
                 <p class="project-desc">
                   A machine learning model that predicts the market value of
                   football players based on their performance stats, age, and
@@ -472,7 +679,7 @@
                       </svg>
                     </a>
                     <a
-                      href=""
+                      href="https://drive.google.com/file/d/1DKp1LkahfpbxNqEiCU3V3OTMJBVERW7w/view"
                       class="icon-link live-link"
                       target="_blank"
                       rel="noopener"
@@ -529,6 +736,20 @@
                 </div>
               </div>
               <h3 class="project-title">Customer Churn Prediction</h3>
+
+              <!-- Replace churn-screenshot.png with your actual screenshot filename -->
+              <div class="project-screenshot">
+                <img
+                  src="screenshots and files/churn-screenshot.png"
+                  class="screenshot-img"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('screenshot-placeholder')"
+                />
+                <div class="screenshot-overlay">
+                  <span class="mono">Churn Prediction Dashboard</span>
+                </div>
+              </div>
+
               <p class="project-desc">
                 Built an end-to-end machine learning pipeline to predict customer churn using behavioral and transactional data, leveraging models like XGBoost and Random Forest. 
                 Deployed the model via a FastAPI service and created an interactive dashboard to deliver actionable insights and retention strategies.
@@ -678,16 +899,12 @@
               <p>
                 I'm currently open to freelance projects, full-time roles, and
                 interesting collaborations. Whether you have a clear idea or
-                just an exciting problem — I'd love to hear from you.
+                just an exciting problem, I'd love to hear from you.
               </p>
 
               <div class="contact-links">
                 
-                <a
-                  href="mailto:dtorres.almazan@gmail.com"
-                  class="contact-link"
-                  aria-label="Email"
-                >
+                <a href="/cdn-cgi/l/email-protection#dfbbabb0adadbaacf1beb3b2bea5beb19fb8b2beb6b3f1bcb0b2" class="contact-link" aria-label="Email">
                   <svg
                     width="20"
                     height="20"
@@ -701,7 +918,7 @@
                     />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  <span>dtorres.almazan@gmail.com</span>
+                  <span><span class="__cf_email__" data-cfemail="99fdedf6ebebfceab7f8f5f4f8e3f8f7d9fef4f8f0f5b7faf6f4">[email&#160;protected]</span></span>
                 </a>
                 <a
                   href="https://github.com/DiegoTorresAlmazan"
@@ -814,15 +1031,9 @@
        ============================================================ -->
     <footer class="footer">
       <div class="container footer-inner">
-        <!-- -: Your name -->
         <span class="mono footer-copy">
           &copy; <span id="footer-year"></span> Diego Torres Almazan. Built with HTML,
           CSS &amp; JS.
         </span>
         <span class="mono footer-sig">Designed &amp; developed with ♥</span>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>

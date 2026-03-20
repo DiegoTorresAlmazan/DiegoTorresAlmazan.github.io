@@ -997,3 +997,18 @@ em {
     transform: none;
   }
 }
+
+/* ── JS FAILURE FALLBACK ──────────────────────────────────────
+   If script.js fails to run, elements stay opacity:0 forever.
+   This animation fires after 1.5s as a safety net — it forces
+   all reveal elements visible regardless of JS state.
+──────────────────────────────────────────────────────────────── */
+@keyframes forceVisible {
+  to { opacity: 1; transform: none; }
+}
+
+.reveal-up,
+.reveal-left,
+.reveal-right {
+  animation: forceVisible 0.01s linear 1.5s both;
+}
