@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Market Value Predictor &mdash; Diego Torres-Almazan</title>
+    <meta name="description" content="A machine learning model that predicts football player market value." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href="../index.html" class="brand">Diego Torres-Almazan</a>
+        <nav class="nav" aria-label="Main">
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#work" aria-current="page">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <a class="back" href="../index.html#work">&larr; All work</a>
+
+      <section class="project-hero">
+        <p class="mono">Project</p>
+        <h1>Football Market Value Predictor</h1>
+        <p class="summary">A machine learning model that predicts football player market value.</p>
+      </section>
+
+      <dl class="meta">
+        <div><dt class="mono">Role</dt><dd>Developer</dd></div>
+        
+        <div><dt class="mono">Stack</dt><dd>Python 3.10, Pandas, Scikit-Learn, XGBoost, SHAP, FastAPI, Streamlit, Docker, Pytest, GitHub Actions</dd></div>
+      </dl>
+
+      <figure class="shot"><img src="../screenshots%20and%20files/football-predictor-screenshot.png" alt="Football Market Value Predictor screenshot" /></figure>
+
+      <section class="split content-block">
+        <h2 class="mono">Overview</h2>
+        <div class="body">
+          <p>An end-to-end machine learning pipeline that predicts the market value of football players. It features a FastAPI backend, a Streamlit dashboard, and SHAP explainability to show why a player is valued at a certain price.</p>
+        </div>
+      </section>
+      <section class="split content-block">
+        <h2 class="mono">What I did</h2>
+        <div class="body">
+          <ul>
+            <li><strong>Interactive dashboard:</strong> a Streamlit interface to input stats and visualize results.</li>
+            <li><strong>Explainable AI:</strong> SHAP values explain which stats (such as age or goals) drove the price up or down.</li>
+            <li><strong>Production-ready API:</strong> a Dockerized FastAPI backend with input validation.</li>
+            <li><strong>Automated tests:</strong> a full Pytest suite keeps the API stable, with GitHub Actions for CI.</li>
+            <li><strong>Robust processing:</strong> handles missing values and categorical encoding (position, foot).</li>
+          </ul>
+        </div>
+      </section>
+      <section class="split content-block">
+        <h2 class="mono">Outcome</h2>
+        <div class="body">
+          <p>A deployed, explainable model that anyone can try, backed by a tested, containerized API.</p>
+        </div>
+      </section>
+
+      <div class="actions" style="margin-bottom: 56px"><a class="btn btn-solid" href="https://football-player-market-predictor-nr89v3n7jub27pxztdubr3.streamlit.app/" target="_blank" rel="noopener">Live demo &nearr;</a> <a class="btn" href="https://github.com/DiegoTorresAlmazan/Football-Player-Market-Predictor" target="_blank" rel="noopener">View on GitHub &nearr;</a></div>
+
+      <nav class="pager" aria-label="More projects">
+        <a href="churn-prediction.html"><span class="mono">&larr; Previous</span><strong>Customer Churn Prediction</strong></a>
+        <a href="vr-rehab.html"><span class="mono">Next &rarr;</span><strong>VR Rehabilitation App</strong></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span class="mono">&copy; <span id="year"></span> Diego Torres-Almazan</span>
+        <a class="mono" href="../index.html">Home</a>
+      </div>
+    </footer>
+  </body>
+</html>

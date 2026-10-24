@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Churn Prediction &mdash; Diego Torres-Almazan</title>
+    <meta name="description" content="An end-to-end machine learning project that predicts customer churn for a fictional B2B SaaS company, from data preprocessing to a REST API and an interactive dashboard." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href="../index.html" class="brand">Diego Torres-Almazan</a>
+        <nav class="nav" aria-label="Main">
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#work" aria-current="page">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <a class="back" href="../index.html#work">&larr; All work</a>
+
+      <section class="project-hero">
+        <p class="mono">Project</p>
+        <h1>Customer Churn Prediction</h1>
+        <p class="summary">An end-to-end machine learning project that predicts customer churn for a fictional B2B SaaS company, from data preprocessing to a REST API and an interactive dashboard.</p>
+      </section>
+
+      <dl class="meta">
+        <div><dt class="mono">Role</dt><dd>Full-stack developer</dd></div>
+        
+        <div><dt class="mono">Stack</dt><dd>Python, SQL, scikit-learn, XGBoost, SMOTE, SHAP, FastAPI, Streamlit, Jupyter</dd></div>
+      </dl>
+
+      <figure class="shot"><img src="../screenshots%20and%20files/churn-screenshot.png" alt="Customer Churn Prediction screenshot" /></figure>
+
+      <section class="split content-block">
+        <h2 class="mono">Overview</h2>
+        <div class="body">
+          <p>This project predicts customer churn for "SynthSaaS", a fictional B2B SaaS company, and is structured to emulate a real-world production environment.</p>
+          <p><strong>The business problem:</strong> SynthSaaS has a high churn rate, which hurts its Monthly Recurring Revenue (MRR) and long-term growth. The goal is a model that proactively identifies customers at high risk of churning, so the business can launch targeted retention campaigns (discounts, extra support, feature training) to reduce churn and increase Customer Lifetime Value (CLV).</p>
+        </div>
+      </section>
+      <section class="split content-block">
+        <h2 class="mono">What I did</h2>
+        <div class="body">
+          <p>I built the project as a series of modular, executable scripts and notebooks:</p>
+          <ul>
+            <li><strong>Exploration and interpretation:</strong> Jupyter notebooks for EDA, feature analysis, and model interpretation with SHAP.</li>
+            <li><strong>Preprocessing:</strong> a script that loads the raw data, cleans it, engineers features and saves model-ready data.</li>
+            <li><strong>Model training:</strong> handles class imbalance with SMOTE, trains Logistic Regression, Random Forest and XGBoost, evaluates them, and saves the best-performing model.</li>
+            <li><strong>Prediction API:</strong> a FastAPI app that serves the trained model through a <code>/predict</code> endpoint returning real-time churn predictions.</li>
+            <li><strong>Interactive dashboard:</strong> a Streamlit app for making predictions through the API and viewing key business insights from the model.</li>
+          </ul>
+          <p>Along the way I:</p>
+          <ul>
+            <li>Developed a full-stack analytics platform that automated churn prediction and dashboard generation, improving business reporting efficiency.</li>
+            <li>Built automated ETL validation workflows that cleaned, verified and transformed customer datasets before analysis, reducing manual data preparation.</li>
+            <li>Implemented REST APIs, validated application functionality, and ran end-to-end testing of the data processing workflows before deployment.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="split content-block">
+        <h2 class="mono">Outcome</h2>
+        <div class="body">
+          <p>A working churn-risk system: customers go in through the dashboard or API, and a prediction comes back that retention teams can act on.</p>
+        </div>
+      </section>
+
+      <div class="actions" style="margin-bottom: 56px"><a class="btn" href="https://github.com/DiegoTorresAlmazan/Customer-Churn-Project" target="_blank" rel="noopener">View on GitHub &nearr;</a></div>
+
+      <nav class="pager" aria-label="More projects">
+        <a href="willowbrook-ranch.html"><span class="mono">&larr; Previous</span><strong>Willowbrook Ranch</strong></a>
+        <a href="football-predictor.html"><span class="mono">Next &rarr;</span><strong>Football Market Value Predictor</strong></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span class="mono">&copy; <span id="year"></span> Diego Torres-Almazan</span>
+        <a class="mono" href="../index.html">Home</a>
+      </div>
+    </footer>
+  </body>
+</html>
